@@ -21,7 +21,7 @@ get(key) | O(1) | O(n)
 delete(key) | O(1) | O(n)
 
 * `PrimitiveHashmap.java` -> the implementation and definition of my hashmap. (**non-executable**)
-* `PrimitiveHashmapSandbox.java` -> testing the Hashmap from a user's perspective (**String->String** only). (**executable**)
+* `PrimitiveHashmapSandbox.java` -> testing the Hashmap from a user's perspective (**executable**)
 * `PrimitiveHashmapTest.java` -> the suite of unit tests. (**non-executable**)
 * `PrimitiveHashmapTestRunner.java` -> to run all the unit tests. (**executable**)
 
