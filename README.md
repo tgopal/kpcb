@@ -1,11 +1,11 @@
-# Primitive Types, Fixed-Size Hashmap - KPCB
-Coding challenge for KPCB Engineering Fellow Application 2018
+# KPCB Engineering Fellow Application - Tejas Gopal
+Coding challenge for KPCB Engineering Fellow Application 2018: Implement a fixed-size hashmap that maps String keys to arbitrary object values using only primitive-types.
 
 Author: Tejas Gopal, B.S. Computer Science UCSD 2019
 
-This repository holds all files necessary for the implementation of the primitive-type, fixed-size hashmap as requested within the application! 
+This repository holds all source, tests, and executable files associated with this part of the application!
 
-It also contains the corresponding unit tests, as well as an executable file to run the tests.
+Let's dive in... :)
 
 ## Information about the implementation
 
@@ -20,9 +20,15 @@ set(key,value) | O(1) | O(n)
 get(key) | O(1) | O(n) 
 delete(key) | O(1) | O(n)
 
+* `PrimitiveHashmap.java` -> the implementation and definition of my hashmap. (**non-executable**)
+* `PrimitiveHashmapSandbox.java` -> testing the Hashmap from a user's perspective (**String->String** only). (**executable**)
+* `PrimitiveHashmapTest.java` -> the suite of unit tests. (**non-executable**)
+* `PrimitiveHashmapTestRunner.java` -> to run all the unit tests. (**executable**)
 
-## Setting up the JUnit Environment 
-First, to set up the environment (**I'm on MacOS**), you will need to add some things to your ~/.bash_profile file to make sure that JUnit runs correctly.
+## Setting up the JUnit Environment + Requirements
+Using the Hashmap requires that you have Java installed on your machine. 
+
+To set up the testing environment (**I'm on MacOS**), you will need to add some things to your ~/.bash_profile file to make sure that JUnit runs correctly.
 
 First, download the .jar files necessary from [here](https://github.com/junit-team/junit4/wiki/Download-and-Install).
 I'm using the `junit-4.12.jar`, and the `hamcrest-core-1.3.jar` files from the link. 
@@ -38,4 +44,6 @@ For reference, to add these files to your classpath, the relevant part of my ~/.
   export CLASSPATH=$CLASSPATH:$JUNIT_HOME/hamcrest-core-1.3.jar:.
 ```
 
-#
+## The best part ... testing Tejas's Hashmap!
+
+
