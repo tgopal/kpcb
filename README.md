@@ -46,4 +46,19 @@ For reference, to add these files to your classpath, the relevant part of my ~/.
 
 ## The best part ... testing Tejas's Hashmap!
 
+The **PrimHashmapSandbox** class is exactly what you are looking for to test out the hashmap! For the sake of simplicity, it only supports String and Integer value object types, but the hashmap will work for any custom object. Before running, run the following command:
 
+`$ javac PrimHashmap.java PrimHashmapSandbox.java PrimHashmapTest.java PrimHashmapTestRunner.java`
+
+Ignore warnings - these are due to Java not liking checks for generic type casting, but don't affect runtime behavior.
+Then, to run the Sandbox:
+
+`$ java PrimHashmapSandbox`
+... and follow the prompts.
+
+The **PrimHashmapTestRunner** class will run the full suite of unit tests defined in `PrimHashmapTest.java`. To run the full suite of tests cases:
+
+`$ javac PrimHashmap.java PrimHashmapSandbox.java PrimHashmapTest.java PrimHashmapTestRunner.java`
+`$ java PrimHashmapTestRunner`
+
+Any feedback is both welcome and really appreciated! Happy hashing :)
