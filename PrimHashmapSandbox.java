@@ -1,4 +1,3 @@
-
 import java.util.*;
 
 public class PrimHashmapSandbox {
@@ -54,8 +53,8 @@ public class PrimHashmapSandbox {
 			scanner.nextLine();
 		}
 
-		if (choice == 1) hashmap = new PrimHashmap<String>();
-		else hashmap = new PrimHashmap<Integer>();
+		if (choice == 1) hashmap = new PrimHashmap<String>(size);
+		else hashmap = new PrimHashmap<Integer>(size);
 	}
 
 	public void sandbox(int choice) {
@@ -125,14 +124,37 @@ public class PrimHashmapSandbox {
 	}
 
 	public void performGet() {
+		Scanner scanner = new Scanner(System.in);
+		System.out.print("\nPlease enter a String key: ");
+		String key = scanner.nextLine();
+		System.out.println();
+
+		if(hashmap.get(key) == null) {
+			System.out.println("That key doesn't exist in the map.");
+		} else {
+			System.out.println("Success! " + key + " maps to -> " + hashmap.get(key));
+		}
+
 		this.sandbox(typeChoice);
 	}
 
 	public void performDelete() {
+		Scanner scanner = new Scanner(System.in);
+		System.out.print("\nPlease enter a String key: ");
+		String key = scanner.nextLine();
+		System.out.println();
+
+		if(hashmap.get(key) == null) {
+			System.out.println("That key doesn't exist in the map.");
+		} else {
+			System.out.println("Success! " + key + " -> " + hashmap.delete(key) + " was deleted.");
+		}
+
 		this.sandbox(typeChoice);
 	}
 
 	public void performLoad() {
+		System.out.println("Current load factor is: " + hashmap.load());
 		this.sandbox(typeChoice);
 	}
 }
