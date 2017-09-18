@@ -257,11 +257,12 @@ public class PrimHashmapTest {
         PrimHashmap<String> hashmap = new PrimHashmap<>(4);
         assertTrue(hashmap.set("a", "aaa"));
         assertTrue(hashmap.set("b", "bbb"));
-
+        assertEquals(2, hashmap.getNumItems());
         assertEquals("bbb", hashmap.delete("b"));
         assertEquals("aaa", hashmap.delete("a"));
         assertEquals(null, hashmap.get("a"));
         assertEquals(null, hashmap.get("b"));
+        assertEquals(0, hashmap.getNumItems());
     }
 
     /**
@@ -274,8 +275,10 @@ public class PrimHashmapTest {
         PrimHashmap<String> hashmap = new PrimHashmap<>(4);
         assertTrue(hashmap.set("a", "aaa"));
         assertTrue(hashmap.set("a", "bbb"));
+        assertEquals(1, hashmap.getNumItems());
 
         assertEquals("bbb", hashmap.delete("a"));
+        assertEquals(0, hashmap.getNumItems());
         assertEquals(null, hashmap.get("a"));
     }
 
@@ -289,6 +292,7 @@ public class PrimHashmapTest {
         assertEquals(null, hashmap.delete("can't"));
         assertEquals(null, hashmap.delete("dp"));
         assertEquals(null, hashmap.delete("anything"));
+        assertEquals(0, hashmap.getNumItems());
     }
 
     /**

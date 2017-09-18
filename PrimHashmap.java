@@ -229,6 +229,7 @@ public class PrimHashmap<ArbObj> {
         if (target == null) return null;
 
         list.deleteNode(target);
+        numItems--;
         return target.getValue();   
     }
 
