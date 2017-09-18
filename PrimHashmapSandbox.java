@@ -66,11 +66,13 @@ public class PrimHashmapSandbox {
 		Scanner scanner = new Scanner(System.in);
 		int oper = 0;
 		while (true) {
-			System.out.println("\n1. Set");
+			System.out.println("----------------");
+			System.out.println("1. Set");
 			System.out.println("2. Get");
 			System.out.println("3. Delete");
 			System.out.println("4. Load");
-			System.out.println("5. Exit\n");
+			System.out.println("5. Exit");
+			System.out.println("----------------\n");
 			System.out.print("What will you do (1-5)? : ");
 			if (!scanner.hasNextInt()) {
 				System.out.println("You must enter a valid integer choice (1-5)!");
@@ -101,6 +103,24 @@ public class PrimHashmapSandbox {
 	}
 
 	public void performSet() {
+		Scanner scanner = new Scanner(System.in);
+		System.out.print("\nPlease enter a String key: ");
+		String key = scanner.nextLine();
+		System.out.println();
+
+		if (typeChoice == 1) {
+			System.out.print("Please enter a String value: ");
+			String value = scanner.nextLine();
+			hashmap.set(key, value);
+		} else {
+			System.out.print("Please enter an integer value: ");
+			while (!scanner.hasNextInt()) {
+				scanner.next();
+				System.out.print("Not an integer, try again. Please enter an integer value: ");
+			}
+			hashmap.set(key, scanner.nextInt());
+		} 
+		
 		this.sandbox(typeChoice);
 	}
 
