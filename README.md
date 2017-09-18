@@ -59,6 +59,7 @@ Then, to run the Sandbox:
 The **PrimHashmapTestRunner** class will run the full suite of unit tests defined in `PrimHashmapTest.java`. To run the full suite of tests cases:
 
 `$ javac PrimHashmap.java PrimHashmapSandbox.java PrimHashmapTest.java PrimHashmapTestRunner.java`
+
 `$ java PrimHashmapTestRunner`
 
 Any feedback is both welcome and really appreciated! Happy hashing :)
